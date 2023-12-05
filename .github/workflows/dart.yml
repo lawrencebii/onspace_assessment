@@ -41,6 +41,12 @@ jobs:
         
       - name: Build apk
         run: flutter build apk --split-per-abi
+      - name : Upload APKs
+        uses: actions/upload-artifact@v2
+        with:
+          name: apks
+          path: build/app/outputs/flutter-apk/*.apk
+      
 
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
