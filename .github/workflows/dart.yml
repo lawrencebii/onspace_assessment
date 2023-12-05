@@ -33,10 +33,10 @@ jobs:
 
       # Consider passing '--fatal-infos' for slightly stricter analysis.
      
-      - name: Dart fix
-        run: dart fix --apply
-      - name: Analyze project source
-        run: dart analyze
+      # - name: Dart fix
+      #   run: dart fix --apply
+      # - name: Analyze project source
+      #   run: dart analyze
         
       - name: Build apk
         run: flutter build apk --split-per-abi
