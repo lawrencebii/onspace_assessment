@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class DrivingPage extends StatefulWidget {
   const DrivingPage({super.key});
@@ -29,10 +30,8 @@ class _DrivingPageState extends State<DrivingPage> {
                   horizontal: 20,
                 ),
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
-                  mainAxisAlignment:
-                      MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(
                       height: 20,
@@ -53,14 +52,28 @@ class _DrivingPageState extends State<DrivingPage> {
               ),
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 20, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
-                children: [Text("Driving")],
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Driving"),
+                  // SizedBox(
+                  //   height: 500,
+                  //   child: GoogleMap(
+                  //     initialCameraPosition: CameraPosition(
+                  //         target: LatLng(1.2921, 36.8219), zoom: 10.0),
+                  //     // onMapCreated: appState.onCreated,
+                  //     myLocationEnabled: true,
+                  //     mapType: MapType.normal,
+                  //     compassEnabled: true,
+                  //     // markers: appState.markers,
+                  //     // onCameraMove: appState.onCameraMove,
+                  //     // polylines: appState.polyLines,
+                  //   ),
+                  // )
+                ],
               ),
             ),
           ),

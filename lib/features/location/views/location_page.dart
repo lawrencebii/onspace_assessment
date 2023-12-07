@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:onspace_assessment/features/location/components/textStyle.dart';
+import 'package:onspace_assessment/utils/map_style.dart';
 
 class LocationPage extends StatefulWidget {
   const LocationPage({super.key});
@@ -9,60 +11,48 @@ class LocationPage extends StatefulWidget {
 }
 
 class _LocationPageState extends State<LocationPage> {
+  late GoogleMapController mapController;
+
+  final LatLng _center = const LatLng(45.521563, -122.677433);
+
+  void _onMapCreated(GoogleMapController controller) {
+    mapController = controller;
+    // mapController.setMapStyle(styleMap);
+    // setState(() {});
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.sizeOf(context);
     return SafeArea(
         child: Scaffold(
+      // backgroundColor: Colors.red,
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            expandedHeight: 100,
-            backgroundColor: Colors.transparent,
-            floating: false,
-            pinned: false,
-            automaticallyImplyLeading: false,
-            collapsedHeight: 100,
-            elevation: 0.0,
-            flexibleSpace: FlexibleSpaceBar(
-              titlePadding: EdgeInsets.zero,
-              background: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(
+                  height: size.height,
+                  width: size.width,
+                  child: GoogleMap(
+                    onMapCreated: _onMapCreated,
+                    initialCameraPosition: CameraPosition(
+                      target: _center,
+                      zoom: 11.0,
+                    ),
+                  ),
                 ),
-                child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
-                  mainAxisAlignment:
-                      MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    InkWell(
-                      splashColor: Colors.white54,
-                      radius: 30,
-                      onTap: () {},
-                      child: const Padding(
-                          padding: EdgeInsets.only(top: 3),
-                          child: Icon(Icons.search)),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          const SliverToBoxAdapter(
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 20, vertical: 10),
-              child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
-                children: [],
-              ),
+              ],
             ),
           ),
         ],

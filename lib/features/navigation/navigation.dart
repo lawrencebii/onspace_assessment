@@ -20,11 +20,8 @@ class _NavigationState extends State<Navigation> {
   @override
   void initState() {
     // TODO: implement initState
-    WidgetsBinding.instance
-        .addPostFrameCallback((timeStamp) {
-      context
-          .read<NavigationProvider>()
-          .setSelectedIndex(0);
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      context.read<NavigationProvider>().setSelectedIndex(0);
     });
     super.initState();
   }
@@ -39,6 +36,7 @@ class _NavigationState extends State<Navigation> {
         children: [
           SafeArea(
             child: Scaffold(
+              backgroundColor: Colors.white54,
               body: Consumer<NavigationProvider>(
                 builder: (context, provider, child) {
                   return IndexedStack(
@@ -52,10 +50,11 @@ class _NavigationState extends State<Navigation> {
                   );
                 },
               ),
-              bottomNavigationBar: const BottomNavBar(),
+              // bottomNavigationBar: const BottomNavBar(),
             ),
           ),
           // const AppProgressIndicator(),
+          Positioned(bottom: 10, child: BottomNavBar()),
         ],
       ),
     );

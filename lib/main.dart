@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:onspace_assessment/features/location/views/location_page.dart';
+import 'package:onspace_assessment/features/navigation/navigation.dart';
+import 'package:onspace_assessment/features/navigation/state_class.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(StateManagementClass(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -14,10 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Locator App',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const LocationPage());
+        home: const Navigation());
   }
 }
