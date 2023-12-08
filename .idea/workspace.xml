@@ -10,17 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e09e8bde-e6dd-42c2-9b13-7a0e140341ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/utils/constants.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/map_style.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cubit/location_cubit/location_cubit.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cubit/location_cubit/location_state.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/location/components/add_item-section.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/location/components/data_container.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/location/components/map_actions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/location/components/top_actions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/location/views/location_detail.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/recent_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/user_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repository/location_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repository/repository_helpers.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/format_date.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/driving/views/driving.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/driving/views/driving.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/location/views/location_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/location/views/location_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/navigation/bottomNav.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/navigation/bottomNav.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/navigation/navigation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/navigation/navigation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/navigation/navigation_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/navigation/navigation_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/onspace_assessment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/onspace_assessment.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

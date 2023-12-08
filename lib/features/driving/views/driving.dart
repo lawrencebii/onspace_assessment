@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../../location/views/location_page.dart';
+
 class DrivingPage extends StatefulWidget {
   const DrivingPage({super.key});
 
@@ -59,20 +61,6 @@ class _DrivingPageState extends State<DrivingPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Driving"),
-                  // SizedBox(
-                  //   height: 500,
-                  //   child: GoogleMap(
-                  //     initialCameraPosition: CameraPosition(
-                  //         target: LatLng(1.2921, 36.8219), zoom: 10.0),
-                  //     // onMapCreated: appState.onCreated,
-                  //     myLocationEnabled: true,
-                  //     mapType: MapType.normal,
-                  //     compassEnabled: true,
-                  //     // markers: appState.markers,
-                  //     // onCameraMove: appState.onCameraMove,
-                  //     // polylines: appState.polyLines,
-                  //   ),
-                  // )
                 ],
               ),
             ),

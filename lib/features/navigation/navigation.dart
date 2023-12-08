@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onspace_assessment/features/chat/views/chat.dart';
+import 'package:onspace_assessment/features/location/views/location_detail.dart';
 import 'package:onspace_assessment/features/location/views/location_page.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +23,7 @@ class _NavigationState extends State<Navigation> {
     // TODO: implement initState
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       context.read<NavigationProvider>().setSelectedIndex(0);
+      context.read<NavigationProvider>().updateCurrentTime();
     });
     super.initState();
   }
@@ -43,6 +45,7 @@ class _NavigationState extends State<Navigation> {
                     index: provider.selectedIndex,
                     children: const [
                       LocationPage(),
+                      // LocationDetail(),
                       DrivingPage(),
                       SafetyPage(),
                       ChatPage(),

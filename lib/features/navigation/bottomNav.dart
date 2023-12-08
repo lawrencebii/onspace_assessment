@@ -59,7 +59,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                   context.read<NavigationProvider>().setSelectedIndex(1);
                 },
                 mainfocus: selected == 1,
-                icon: bottomIcon(selected == 1, Icons.safety_check),
+                icon: bottomIcon(selected == 1, Icons.route_outlined),
                 name: "Driving",
               ),
               CustomIconButton2(
