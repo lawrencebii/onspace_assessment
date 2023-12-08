@@ -1,6 +1,6 @@
 # onspace_assessment
 
-[![Watch the Project Demo video](https://youtu.be/YdVLua1Tkzw/hqdefault.jpg)](https://www.youtube.com/watch?v=<VIDEO_ID>)
+[![Watch the Project Demo video](https://youtu.be/YdVLua1Tkzw/hqdefault.jpg)](https://www.youtube.com/watch?v=YdVLua1Tkzw)
 
 [//]: # (
 This is a locator project for assessment;
